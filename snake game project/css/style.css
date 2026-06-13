@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    background: url("../bacl.jpg") center/cover no-repeat;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f5f0e8;
+}
+
+#board{
+    background: rgba(10, 30, 20, 0.75);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+    width: 90vmin;
+    height: 91vmin;
+    border: 2px solid rgba(240, 230, 180, 0.5);
+    display: grid;
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+    backdrop-filter: blur(5px);
+}
+
+.head{
+    background: linear-gradient(135deg, #ffd966, #f4b400);
+    border: 2px solid rgba(255, 212, 102, 0.85);
+    transform: scale(1.02);
+    border-radius: 9px;
+}
+
+.snake{
+    background: linear-gradient(135deg, #6bbf59, #2e7d32);
+    border: .2vmin solid rgba(255, 255, 255, 0.45);
+    border-radius: 50px;
+}
+
+.food{
+    background: radial-gradient(circle at top left, #ffca28, #ff5722);
+    border: .25vmin solid rgba(255, 255, 255, 0.6);
+    border-radius: 999px;
+}
+
+#score{
+    position: fixed;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #fff;
+    background: rgba(20, 40, 30, 0.85);
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    border-radius: 14px;
+    padding: 0.8rem 1.4rem;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.45);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 20;
+}
